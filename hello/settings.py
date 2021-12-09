@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sid1'
 ]
 
 MIDDLEWARE = [
@@ -137,7 +138,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     #Allow all host headers
-    ALLOWED_HOSTS = ['hellosid.herokuapp.com']
+    ALLOWED_HOSTS = ['127.0.0.1','hellosid.herokuapp.com']
     DEBUG = True
 
     #Static asset configuration
