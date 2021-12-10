@@ -20,7 +20,7 @@ def compile(file,lang):
         os.remove(class_file)
     if (os.path.isfile(file)):
         if lang == 'java':
-            os.system('javac '+file)
+          os.system('javac '+file)
         elif lang == 'c' or lang == 'cpp':
             os.system('gcc -o '+class_file+' '+file)
         if (os.path.isfile(class_file)):
@@ -36,6 +36,8 @@ def compile(file,lang):
 def method1(request):
     code=request.data.get('code')
     len1=request.data.get('len')
+    if os.path.isfile("Main.java"):
+        os.remove("Main.java")
     f = open("Main.java", "x")
     f.write(code)
     f.close()
